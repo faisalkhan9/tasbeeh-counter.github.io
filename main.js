@@ -1,8 +1,18 @@
+function userfirstcheck(){
+  var usercheck = localStorage.getItem('name')
+  if(usercheck == null){
+    
+    count = 0;
+    localStorage.setItem('name', '0') ;
+  }
+  else if(usercheck != null){
+    
+  
+
 
 
 localStorage.getItem('name');
-if ('name' === null) {
-  count = 0; }
+
 let a = document.getElementById('count').innerHTML = localStorage.getItem('name');
 let count = parseInt(a);
 document.getElementById('increaseBtn').onclick = function() {
@@ -23,3 +33,4 @@ document.getElementById('resetBtn').onclick = function() {
     localStorage.getItem('name');
   }
 }
+  }
