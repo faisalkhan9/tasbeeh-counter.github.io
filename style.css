@@ -1,0 +1,156 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+@font-face { 
+  font-family: "Technology-Bold";
+  src: url('/tasbeeh counter/Technology-Bold.ttf')
+}
+ body {
+   height: 100vh;
+   background: url('/tasbeeh counter/rhombusBlack.jpg'); 
+   background-size: cover;
+   background-position: center;
+   display: grid;
+   place-items: center;
+ }
+
+ .container {
+background: #6610f2  /*#dc3545*/ /* #20c997 */  ;
+   
+   height: 250px;
+   width: 220px;
+   padding-top: 20px;
+   border-radius: 50% 50% 50% 50% / 50% 50% 100% 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+  box-shadow: inset 4px 6px 6px #ffffff50,inset -2px -6px 10px #00000080;
+   }
+.container h4 {
+  color:white;
+ margin:10px auto;
+}
+ .counter {
+   position: relative;
+   border-radius: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 90px;
+   width: 180px;
+   background-image:linear-gradient(to right bottom,#262626,black);
+   box-shadow:inset -3px -3px 2px #00000080;
+   
+ }
+
+ .band {
+
+   height: 500px;
+   width: 100px;
+   background: #ffffff80;
+   position: absolute;
+   top: 48px;
+   border-radius: 50px;
+   z-index: -1111;
+   border: 2px solid #ffffff90;
+   display: flex;
+   flex-direction: column;
+   align-items:center ;
+   justify-content: space-between;
+   
+ }
+ .band-up {
+   height:50px;
+   width:40px;
+   
+   display: grid;
+   place-items: center;
+   margin-top: 30px;
+ }
+ .band-down {
+      height:60px;
+   width:40px;
+ 
+   display: grid;
+   place-items: center;
+   margin-bottom: 20px;
+ }
+ .band-up .band-circle {
+   background: #f2f2f2;
+   box-shadow: inset 1px 1px 1px #fff,inset -1px -2px 1px #00000050,1px 1px 1px #00000050;
+   border:1.5px solid white;
+   height:18px;
+   width:18px;
+ }
+ .band-down .band-circle {
+   background: #262626;
+  border:1px solid #ffffff;
+ }
+ 
+.band-circle {
+  height:15px;
+  width:15px;
+  border-radius: 50px;
+  
+}
+
+ #count {
+   font-size: 50px;
+   color: #1C1D15;
+   height: 50px;
+   width: 140px;
+   background: #93977B;
+     font-family: "Technology-Bold";
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-right: 10px;
+   padding-top:12px;
+   box-shadow: inset 2px 4px 4px 0px #1C1D15;
+   border: 2px solid lightgray; 
+   border-radius: 5px;
+ }
+
+ .buttons {
+   height: 120px;
+   width: 120px;
+   /*   border: 2px solid black; */
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+ }
+
+ .button {}
+
+ #resetBtn {
+   height: 20px;
+   width: 20px;
+   border-radius: 50px;
+   position: absolute;
+   top: 10px;
+   right: 0;
+   background-image:linear-gradient(to bottom right,white,gray);
+     box-shadow: inset 2px 2px 2px #ffffff80,inset -1px -1px 2px #00000050,1px 2px 2px #00000050;
+    border:2px solid gray;
+    transition: all .3s;
+ }
+
+ #increaseBtn {
+   height: 65px;
+   width: 65px;
+   border-radius: 50px;
+   background-image:linear-gradient(to bottom right,white,gray);
+     box-shadow: inset 4px 6px 2px #ffffff80,inset -2px -2px 2px #00000050,2px 4px 2px #00000050;
+    border:2px solid gray;
+    transition: all .25s;
+    
+ }
+ #increaseBtn:active {
+   transform: scale(.96);
+        box-shadow: inset 4px 6px 2px #ffffff80,inset -2px -2px 2px #00000050,0px 1px 1px #00000080;
+ }
