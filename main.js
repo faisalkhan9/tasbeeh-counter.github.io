@@ -1,7 +1,7 @@
 
 
 localStorage.getItem('name');
-if (name === null) {
+if ('name' === null) {
   count = 0; }
 let a = document.getElementById('count').innerHTML = localStorage.getItem('name');
 let count = parseInt(a);
