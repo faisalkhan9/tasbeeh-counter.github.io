@@ -1,8 +1,10 @@
 
 
 localStorage.getItem('name');
+if (name === null) {
+  count = 0; }
 let a = document.getElementById('count').innerHTML = localStorage.getItem('name');
-let count = 0 + parseInt(a);
+let count = parseInt(a);
 document.getElementById('increaseBtn').onclick = function() {
   /*  let click = document.getElementById('click').play(); */
   count += 1;
