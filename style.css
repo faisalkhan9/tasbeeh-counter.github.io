@@ -5,11 +5,11 @@
  }
 @font-face { 
   font-family: "Technology-Bold";
-  src: url('/tasbeeh counter/Technology-Bold.ttf')
+  src: url('Technology-Bold.ttf')
 }
  body {
    height: 100vh;
-   background: url('/tasbeeh counter/rhombusBlack.jpg'); 
+   background: url('rhombusBlack.jpg'); 
    background-size: cover;
    background-position: center;
    display: grid;
