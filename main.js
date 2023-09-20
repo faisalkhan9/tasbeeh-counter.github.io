@@ -1,17 +1,17 @@
-setTimeout (function() {
+/* setTimeout (function() {
   alert("reset to start (small button)")
 },3000);
+*/
 
 
-
-localStorage.getItem('name');
-let a = document.getElementById('count').innerHTML = localStorage.getItem('name');
-let count = parseInt(a);
+/* localStorage.getItem('name');
+let a = document.getElementById('count').innerHTML = localStorage.getItem('name'); */
+let count = 0 /* parseInt(a) */;
 document.getElementById('increaseBtn').onclick = function() {
   /*  let click = document.getElementById('click').play(); */
   count += 1;
   document.getElementById('count').innerHTML = count;
-  localStorage.setItem('name', JSON.stringify(count));
+/*  localStorage.setItem('name', JSON.stringify(count)); */
 }
 document.getElementById('resetBtn').onclick = function() {
 
