@@ -7,12 +7,7 @@ function userfirstcheck(){
   }
   else if(usercheck != null){
     
-  
-
-
-
 localStorage.getItem('name');
-
 let a = document.getElementById('count').innerHTML = localStorage.getItem('name');
 let count = parseInt(a);
 document.getElementById('increaseBtn').onclick = function() {
