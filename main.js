@@ -6,7 +6,7 @@ if (a == null) {
         localStorage.setItem('name', JSON.stringify(count));
 }
 else {
-let a =  document.getElementById('count').innerHTML =  localStorage.getItem('name');
+let a = localStorage.getItem('name');
   let count = parseInt(a);
   document.getElementById('increaseBtn').onclick = function() {
     /*  let click = document.getElementById('click').play(); */
