@@ -4,43 +4,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tasbeeh Counter</title>
+  <meta name="theme-color" content="#ff4d4d" />
+  <title></title>
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-<div class=All>
-  <div class="container">
-    <div class="band">
-      <div class="band-up">
-        <div class="band-circle">
+
+  <div class="color-widget">
+
+    <select name="color" id="counter-color" onchange="myfun()">
+      <option value="#FF3636">Red</option>
+      <option value="#8339FF">Purple</option>
+      <option value="#FF1493">Pink</option>
+      <option value="#EFC108">Yellow</option>
+
+
+  <!--   <option value="#179717">Green</option>
+      <option value="#3B70CB">Blue</option>
+      <option id="black" value="#262626">Black</option>
+      <option value="#DADADA">White</option>
+      -->
+    </select>
+
+  </div>
+
+  <div class="All">
+    <div class="container">
+      <div class="band">
+        <div class="band-up">
+          <div class="band-circle">
+          </div>
+        </div>
+        <div class="band-down">
+          <div class="band-circle">
+          </div>
+          <div class="band-circle">
+          </div>
+
         </div>
       </div>
-      <div class="band-down">
-        <div class="band-circle">
-        </div>
-        <div class="band-circle">
-        </div>
+      <h4 id="tasbeeh"></h4>
+      <div class="counter">
+        <div id="count"><h4>0</h4></div>
       </div>
-    </div>
-    <h4>Tasbeeh Counter</h4>
-    <div class="counter">
-      <label id="count">0</label>
-    </div>
-    <div class="buttons">
-      <button id="resetBtn"></button>
-      <button id="increaseBtn"></button>
+      <div class="buttons">
+        <h4>RESET</h4>
+        <h4>LED</h4>
+        <h4>
+        </h4>
+        <svg id="count-svg" width="260px" height="200px">
+          <path id="curve" d=" M 0 120 C 0 120, 130 0,260 90"></path>
+          <text class="text" text-anchor="middle">
+            <textPath class="text_path" href="#curve" startOffset="50%">
+              COUNT
+            </textPath>
+          </text>
+        </svg>
+
+        <button id="resetBtn"></button>
+        <button id="ledBtn" onclick="led()"></button>
+        <button onclick="click()" id="increaseBtn"></button>
+      </div>
     </div>
   </div>
-</div>
-  <audio src="/audio/click-button.mp3" preload="auto" id="click"></audio>
-<div class="credits">
-  <h4>made by faisal khan</h4>
-  <a href="https://linktr.ee/faisalkhan57" target="_blank">linktree</a>
-</div>
+  <audio src="/audio/lclick-13694.mp3" preload="auto" id="click"></audio>
+  <div class="credits">
+    <h4>made by faisal khan</h4>
+    <a href="https://linktr.ee/faisalkhan57" target="_blank">linktree</a>
+  </div>
 
   <script src="main.js"></script>
+  <script>
+  sessionStorage.setItem("background", "#FF3636");
+  
+  
+
+  
+    function myfun() {
+          
+  
+
+      let counter_color = document.getElementById("counter-color").value;
+
+      sessionStorage.setItem("background", counter_color);
+      let background = sessionStorage.getItem("background");
+      let container = document.querySelector(".container").style.background = background;
+
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', background);
+      document.getElementById("increaseBtn").style.background = background;
+      document.getElementById("resetBtn").style.background = background;
+      document.getElementById("ledBtn").style.background = background;
+     led2() ;
+    }
+    
+
+
+
+   function led() {
+
+      let ledBtn = document.querySelector("#ledBtn");
+     ledBtn.classList.toggle("on");
+      const isActive = ledBtn.classList.contains("on");
+      if (isActive) {
+        /* document.getElementById("count").style.background = "#24FF00";*/
+
+        let background = sessionStorage.getItem("background");
+        document.getElementById("count").style.background = background;
+        document.getElementById("count").style.filter = "brightness(1.8)";
+        
+      let black =  document.getElementById("black").selected;
+      if(black) {
+                document.getElementById("count").style.background = "#fff";
+        document.getElementById("count").style.filter = "brightness(1.8)";
+      }
+      
+      }
+      else {
+
+        document.getElementById("count").style.background = "#9BAB8E";
+        document.getElementById("count").style.filter = "brightness(1)";
+      }
+    } 
+    
+    function led2() {
+    
+      let ledBtn = document.querySelector("#ledBtn");
+    //  ledBtn.classList.toggle("on");
+      const isActive = ledBtn.classList.contains("on");
+      if (isActive) {
+        /* document.getElementById("count").style.background = "#24FF00";*/
+    
+        let background = sessionStorage.getItem("background");
+        document.getElementById("count").style.background = background;
+        document.getElementById("count").style.filter = "brightness(1.8)";
+        
+              let black =  document.getElementById("black").selected;
+      if(black) {
+                document.getElementById("count").style.background = "#fff";
+        document.getElementById("count").style.filter = "brightness(1.8)";
+      }
+      
+        
+      }
+      else {
+    
+        document.getElementById("count").style.background = "#9BAB8E";
+        document.getElementById("count").style.filter = "brightness(1)";
+      }
+    }
+    
+    
+    
+  </script>
+
+
+
 </body>
 
-</html>
+  </html>
