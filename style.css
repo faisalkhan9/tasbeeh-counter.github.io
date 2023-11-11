@@ -20,7 +20,7 @@
    /* background: #ecedff;*/
  /*  background: linear-gradient(to right bottom, #FFEFBD, #50A7FF*/
   
-   background: url("background.jpg");
+   background: url("https://pixabay.com/photos/wood-boards-texture-wooden-brown-2045380/");
    background:;
    background-size: cover;
    background-position: center;
@@ -245,7 +245,7 @@ color: transparent;
    padding-right: 10px;
    padding-top: 8%;
 
-   box-shadow: inset -2px 4px 4px 0px #1C1D15;
+   box-shadow: inset 2px 4px 4px 0px #1C1D15;
    border: 2px solid lightgray;
    border-radius: 5px;
    /* background: #24FF00;*/
